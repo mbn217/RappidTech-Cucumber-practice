@@ -8,6 +8,7 @@ public class BingSearch_StepDef {
 
     @Given("user is on the Bing search page")
     public void user_is_on_the_bing_search_page() {
+
         System.out.println("++++++user is on the Bing search page");
     }
 
@@ -25,5 +26,8 @@ public class BingSearch_StepDef {
     public void the_search_result_count_should_be_greater_than(Integer int1) {
         System.out.println("++++++the search result count should be greater than " + int1);
     }
+
+
+
 
 }

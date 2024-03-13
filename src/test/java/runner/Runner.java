@@ -9,12 +9,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features/"}, // path to the feature files
         glue = {"step_definition"},  // path to the step definition files
-        plugin = {"pretty","html:target/RappidTech-report.html",
+        plugin = {"pretty",
+                "html:target/RappidTech-report.html",
                 "json:target/RappidTech-report.json",
-                "me.jvt.cucumber.report.PrettyReports:target/RappidTech-report"}, // to generate reports
+                "me.jvt.cucumber.report.PrettyReports:target/RappidTech-report"} // to generate reports
         //monochrome = true // to make the console output in a better format
         //dryRun = true // to check if the mapping is proper between feature file and step definition file
-        publish = false
+        //publish = false // to publish the report
+
 
 )
 public class Runner {
