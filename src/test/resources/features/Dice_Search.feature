@@ -2,7 +2,7 @@ Feature: Dice Job search
   As a user , I should be able to search for jobs , using a keyword and zipcode
   then see results
 
-  @smoke @all @regression
+  @smoke @all @regression @size
   Scenario: User searches for a job
     Given user is on dice homepage
     When user enters keyword and zipcode

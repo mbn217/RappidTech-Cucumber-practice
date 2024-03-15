@@ -1,12 +1,17 @@
 package step_definition;
 
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.json.JsonOutput;
 
 public class DiceSearch_StepDef {
+
+
+
     @Given("user is on dice homepage")
     public void user_is_on_dice_homepage() {
         System.out.println("++++++++User is on dice homepage");
