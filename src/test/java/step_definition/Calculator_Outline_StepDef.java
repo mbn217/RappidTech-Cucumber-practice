@@ -18,6 +18,7 @@ public class Calculator_Outline_StepDef {
     @Then("the result should be {int} on the screen")
     public void the_result_should_be_on_the_screen(Integer int1) {
         System.out.println("the result should be " + int1 + " on the screen");
+
     }
 
 }
