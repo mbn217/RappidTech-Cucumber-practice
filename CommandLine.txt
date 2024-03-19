@@ -1,0 +1,25 @@
+tags = "@wip"
+#Override tags from command line:
+mvn test -Dcucumber.options="--tags @smoke"    -- It works for cucumber version 5 and below
+
+mvn test -Dcucumber.filter.tags="@smoke"       -- It works for cucumber version 6 and above
+
+mvn test -Dcucumber.filter.tags="@smoke and @regression"       -- It works for cucumber version 6 and above
+
+
+-------------------------------------------
+#Suppose you want to run a single Feature File from the command line, then use the below syntax
+mvn test -Dcucumber.features="src/test/resources/features/Bing_Search.feature"
+
+#If we want to run a single Scenario from the command line and no tag is assigned to that scenario, this is how we specify:
+mvn test -Dcucumber.features="src/test/resources/features/Bing_Search.feature:12"
+
+#If we want to generate a different report, then we can use the following command
+#and see the HTML report generate at the location mentioned:
+mvn test -Dcucumber.plugin="html:target/xyz-html-report.html"
+
+
+#If we want to pass more than one parameter, then we can use the following command:
+mvn test -Dcucumber.filter.tags="@smoke and @regression" -Dcucumber.plugin="html:target/xyz-html-report.html"
+
+
